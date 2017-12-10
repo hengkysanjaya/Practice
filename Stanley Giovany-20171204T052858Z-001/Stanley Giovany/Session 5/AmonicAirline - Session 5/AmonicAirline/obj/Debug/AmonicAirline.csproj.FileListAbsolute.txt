@@ -1,0 +1,3 @@
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 5\AmonicAirline - Session 5\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 5\AmonicAirline - Session 5\AmonicAirline\obj\Debug\AmonicAirline.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 5\AmonicAirline - Session 5\AmonicAirline\obj\Debug\AmonicAirline.pdb

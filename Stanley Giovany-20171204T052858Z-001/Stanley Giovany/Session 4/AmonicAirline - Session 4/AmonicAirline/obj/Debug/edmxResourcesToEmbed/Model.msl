@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="session4ModelStoreContainer" CdmEntityContainer="session4Entities">
+    <EntitySetMapping Name="Choices">
+      <EntityTypeMapping TypeName="session4Model.Choice">
+        <MappingFragment StoreEntitySet="Choice">
+          <ScalarProperty Name="ChoiceId" ColumnName="ChoiceId" />
+          <ScalarProperty Name="ChoiceText" ColumnName="ChoiceText" />
+          <ScalarProperty Name="ChoiceValue" ColumnName="ChoiceValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mappings">
+      <EntityTypeMapping TypeName="session4Model.Mapping">
+        <MappingFragment StoreEntitySet="Mapping">
+          <ScalarProperty Name="MappingId" ColumnName="MappingId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="MultipleChoiceId" ColumnName="MultipleChoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MultipleChoices">
+      <EntityTypeMapping TypeName="session4Model.MultipleChoice">
+        <MappingFragment StoreEntitySet="MultipleChoice">
+          <ScalarProperty Name="MultipleChoiceId" ColumnName="MultipleChoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="session4Model.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Surveys">
+      <EntityTypeMapping TypeName="session4Model.Survey">
+        <MappingFragment StoreEntitySet="Survey">
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="SurveyName" ColumnName="SurveyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SurveySubmissions">
+      <EntityTypeMapping TypeName="session4Model.SurveySubmission">
+        <MappingFragment StoreEntitySet="SurveySubmission">
+          <ScalarProperty Name="SurveySubmissionId" ColumnName="SurveySubmissionId" />
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DepartureAirport" ColumnName="DepartureAirport" />
+          <ScalarProperty Name="ArrivalAirport" ColumnName="ArrivalAirport" />
+          <ScalarProperty Name="CabinType" ColumnName="CabinType" />
+          <ScalarProperty Name="SubmissionMonth" ColumnName="SubmissionMonth" />
+          <ScalarProperty Name="SubmissionYear" ColumnName="SubmissionYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SurveySubmissionDetails">
+      <EntityTypeMapping TypeName="session4Model.SurveySubmissionDetail">
+        <MappingFragment StoreEntitySet="SurveySubmissionDetail">
+          <ScalarProperty Name="SurveySubmissionDetailId" ColumnName="SurveySubmissionDetailId" />
+          <ScalarProperty Name="SurveySubmissionId" ColumnName="SurveySubmissionId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="ChoiceId" ColumnName="ChoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MultipleChoiceDetail" TypeName="session4Model.MultipleChoiceDetail" StoreEntitySet="MultipleChoiceDetail">
+      <EndProperty Name="Choice">
+        <ScalarProperty Name="ChoiceId" ColumnName="ChoiceId" />
+      </EndProperty>
+      <EndProperty Name="MultipleChoice">
+        <ScalarProperty Name="MultipleChoiceId" ColumnName="MultipleChoiceId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SurveyDetail" TypeName="session4Model.SurveyDetail" StoreEntitySet="SurveyDetail">
+      <EndProperty Name="Mapping">
+        <ScalarProperty Name="MappingId" ColumnName="MappingId" />
+      </EndProperty>
+      <EndProperty Name="Survey">
+        <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

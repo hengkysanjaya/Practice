@@ -1,0 +1,7 @@
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\bin\Debug\ReceiveNotification.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\bin\Debug\ReceiveNotification.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\bin\Debug\ReceiveNotification.pdb
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\bin\Debug\TableDependency.dll
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\bin\Debug\TableDependency.SqlClient.dll
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\obj\Debug\ReceiveNotification.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\ReceiveNotification\ReceiveNotification\obj\Debug\ReceiveNotification.pdb

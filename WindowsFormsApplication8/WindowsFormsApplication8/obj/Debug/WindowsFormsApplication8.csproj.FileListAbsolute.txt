@@ -1,0 +1,5 @@
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\WindowsFormsApplication8\WindowsFormsApplication8\bin\Debug\WindowsFormsApplication8.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\WindowsFormsApplication8.csprojResolveAssemblyReference.cache
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\WindowsFormsApplication8.Form1.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\WindowsFormsApplication8.Properties.Resources.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\WindowsFormsApplication8\WindowsFormsApplication8\obj\Debug\WindowsFormsApplication8.csproj.GenerateResource.Cache

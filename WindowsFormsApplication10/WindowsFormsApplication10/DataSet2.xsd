@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Report" msprop:Generator_TableClassName="ReportDataTable" msprop:Generator_TableVarName="tableReport" msprop:Generator_TablePropName="Report" msprop:Generator_RowDeletingName="ReportRowDeleting" msprop:Generator_RowChangingName="ReportRowChanging" msprop:Generator_RowEvHandlerName="ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportRowDeleted" msprop:Generator_UserTableName="Report" msprop:Generator_RowChangedName="ReportRowChanged" msprop:Generator_RowEvArgName="ReportRowChangeEvent" msprop:Generator_RowClassName="ReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalSurvey" msprop:Generator_ColumnVarNameInTable="columnTotalSurvey" msprop:Generator_ColumnPropNameInRow="TotalSurvey" msprop:Generator_ColumnPropNameInTable="TotalSurveyColumn" msprop:Generator_UserColumnName="TotalSurvey" type="xs:string" minOccurs="0" />
+              <xs:element name="GenderName" msprop:Generator_ColumnVarNameInTable="columnGenderName" msprop:Generator_ColumnPropNameInRow="GenderName" msprop:Generator_ColumnPropNameInTable="GenderNameColumn" msprop:Generator_UserColumnName="GenderName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalGender" msprop:Generator_ColumnVarNameInTable="columnTotalGender" msprop:Generator_ColumnPropNameInRow="TotalGender" msprop:Generator_ColumnPropNameInTable="TotalGenderColumn" msprop:Generator_UserColumnName="TotalGender" type="xs:string" minOccurs="0" />
+              <xs:element name="AgeRange" msprop:Generator_ColumnVarNameInTable="columnAgeRange" msprop:Generator_ColumnPropNameInRow="AgeRange" msprop:Generator_ColumnPropNameInTable="AgeRangeColumn" msprop:Generator_UserColumnName="AgeRange" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAgeRange" msprop:Generator_ColumnVarNameInTable="columnTotalAgeRange" msprop:Generator_ColumnPropNameInRow="TotalAgeRange" msprop:Generator_ColumnPropNameInTable="TotalAgeRangeColumn" msprop:Generator_UserColumnName="TotalAgeRange" type="xs:string" minOccurs="0" />
+              <xs:element name="CabinTypeName" msprop:Generator_ColumnVarNameInTable="columnCabinTypeName" msprop:Generator_ColumnPropNameInRow="CabinTypeName" msprop:Generator_ColumnPropNameInTable="CabinTypeNameColumn" msprop:Generator_UserColumnName="CabinTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCabinTypeName" msprop:Generator_ColumnVarNameInTable="columnTotalCabinTypeName" msprop:Generator_ColumnPropNameInRow="TotalCabinTypeName" msprop:Generator_ColumnPropNameInTable="TotalCabinTypeNameColumn" msprop:Generator_UserColumnName="TotalCabinTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="AirportCode" msprop:Generator_ColumnVarNameInTable="columnAirportCode" msprop:Generator_ColumnPropNameInRow="AirportCode" msprop:Generator_ColumnPropNameInTable="AirportCodeColumn" msprop:Generator_UserColumnName="AirportCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAirport" msprop:Generator_ColumnVarNameInTable="columnTotalAirport" msprop:Generator_ColumnPropNameInRow="TotalAirport" msprop:Generator_ColumnPropNameInTable="TotalAirportColumn" msprop:Generator_UserColumnName="TotalAirport" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

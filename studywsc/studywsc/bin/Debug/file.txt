@@ -1,0 +1,6 @@
+1;test@yahoo.com;11/10/2017 5:13:56 PM;11/10/2017 5:13:59 PM;normal
+2;test@yahoo.com;11/10/2017 5:14:37 PM;11/10/2017 5:14:39 PM;normal
+3;test@yahoo.com;11/10/2017 5:14:55 PM;11/10/2017 5:14:57 PM;test
+4;test@yahoo.com;11/10/2017 5:15:50 PM;11/10/2017 5:15:56 PM;normal
+5;test@yahoo.com;11/10/2017 5:18:38 PM;11/10/2017 5:18:42 PM;I don't know
+6;test@yahoo.com;11/10/2017 5:18:46 PM;11/10/2017 5:18:55 PM;asdfasdf

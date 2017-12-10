@@ -1,0 +1,6 @@
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\bin\Debug\quiz2.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\bin\Debug\quiz2.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\bin\Debug\quiz2.pdb
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\obj\Debug\quiz2.csprojResolveAssemblyReference.cache
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\obj\Debug\quiz2.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\quiz2\quiz2\obj\Debug\quiz2.pdb

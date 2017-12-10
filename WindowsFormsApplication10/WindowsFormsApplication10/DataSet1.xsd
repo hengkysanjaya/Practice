@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CabinType" msprop:Generator_TableClassName="CabinTypeDataTable" msprop:Generator_TableVarName="tableCabinType" msprop:Generator_TablePropName="CabinType" msprop:Generator_RowDeletingName="CabinTypeRowDeleting" msprop:Generator_RowChangingName="CabinTypeRowChanging" msprop:Generator_RowEvHandlerName="CabinTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="CabinTypeRowDeleted" msprop:Generator_UserTableName="CabinType" msprop:Generator_RowChangedName="CabinTypeRowChanged" msprop:Generator_RowEvArgName="CabinTypeRowChangeEvent" msprop:Generator_RowClassName="CabinTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CabinTypeName" msprop:Generator_ColumnVarNameInTable="columnCabinTypeName" msprop:Generator_ColumnPropNameInRow="CabinTypeName" msprop:Generator_ColumnPropNameInTable="CabinTypeNameColumn" msprop:Generator_UserColumnName="CabinTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DestinationAirport" msprop:Generator_TableClassName="DestinationAirportDataTable" msprop:Generator_TableVarName="tableDestinationAirport" msprop:Generator_TablePropName="DestinationAirport" msprop:Generator_RowDeletingName="DestinationAirportRowDeleting" msprop:Generator_RowChangingName="DestinationAirportRowChanging" msprop:Generator_RowEvHandlerName="DestinationAirportRowChangeEventHandler" msprop:Generator_RowDeletedName="DestinationAirportRowDeleted" msprop:Generator_UserTableName="DestinationAirport" msprop:Generator_RowChangedName="DestinationAirportRowChanged" msprop:Generator_RowEvArgName="DestinationAirportRowChangeEvent" msprop:Generator_RowClassName="DestinationAirportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AirportCode" msprop:Generator_ColumnVarNameInTable="columnAirportCode" msprop:Generator_ColumnPropNameInRow="AirportCode" msprop:Generator_ColumnPropNameInTable="AirportCodeColumn" msprop:Generator_UserColumnName="AirportCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAirport" msprop:Generator_ColumnVarNameInTable="columnTotalAirport" msprop:Generator_ColumnPropNameInRow="TotalAirport" msprop:Generator_ColumnPropNameInTable="TotalAirportColumn" msprop:Generator_UserColumnName="TotalAirport" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AnswerCategory" msprop:Generator_TableClassName="AnswerCategoryDataTable" msprop:Generator_TableVarName="tableAnswerCategory" msprop:Generator_TablePropName="AnswerCategory" msprop:Generator_RowDeletingName="AnswerCategoryRowDeleting" msprop:Generator_RowChangingName="AnswerCategoryRowChanging" msprop:Generator_RowEvHandlerName="AnswerCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="AnswerCategoryRowDeleted" msprop:Generator_UserTableName="AnswerCategory" msprop:Generator_RowChangedName="AnswerCategoryRowChanged" msprop:Generator_RowEvArgName="AnswerCategoryRowChangeEvent" msprop:Generator_RowClassName="AnswerCategoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAnswer" msprop:Generator_ColumnVarNameInTable="columnTotalAnswer" msprop:Generator_ColumnPropNameInRow="TotalAnswer" msprop:Generator_ColumnPropNameInTable="TotalAnswerColumn" msprop:Generator_UserColumnName="TotalAnswer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Age" msprop:Generator_TableClassName="AgeDataTable" msprop:Generator_TableVarName="tableAge" msprop:Generator_TablePropName="Age" msprop:Generator_RowDeletingName="AgeRowDeleting" msprop:Generator_RowChangingName="AgeRowChanging" msprop:Generator_RowEvHandlerName="AgeRowChangeEventHandler" msprop:Generator_RowDeletedName="AgeRowDeleted" msprop:Generator_UserTableName="Age" msprop:Generator_RowChangedName="AgeRowChanged" msprop:Generator_RowEvArgName="AgeRowChangeEvent" msprop:Generator_RowClassName="AgeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AgeRange" msdata:Caption="AirportCode" msprop:Generator_ColumnVarNameInTable="columnAgeRange" msprop:Generator_ColumnPropNameInRow="AgeRange" msprop:Generator_ColumnPropNameInTable="AgeRangeColumn" msprop:Generator_UserColumnName="AgeRange" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAgeRange" msdata:Caption="Total" msprop:Generator_ColumnVarNameInTable="columnTotalAgeRange" msprop:Generator_ColumnPropNameInRow="TotalAgeRange" msprop:Generator_ColumnPropNameInTable="TotalAgeRangeColumn" msprop:Generator_UserColumnName="TotalAgeRange" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GenderName" msdata:Caption="AirportCode" msprop:Generator_ColumnVarNameInTable="columnGenderName" msprop:Generator_ColumnPropNameInRow="GenderName" msprop:Generator_ColumnPropNameInTable="GenderNameColumn" msprop:Generator_UserColumnName="GenderName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalGender" msdata:Caption="Total" msprop:Generator_ColumnVarNameInTable="columnTotalGender" msprop:Generator_ColumnPropNameInRow="TotalGender" msprop:Generator_ColumnPropNameInTable="TotalGenderColumn" msprop:Generator_UserColumnName="TotalGender" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerCategoryName" msprop:Generator_ColumnVarNameInTable="columnAnswerCategoryName" msprop:Generator_ColumnPropNameInRow="AnswerCategoryName" msprop:Generator_ColumnPropNameInTable="AnswerCategoryNameColumn" msprop:Generator_UserColumnName="AnswerCategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="SurveyCategory" msprop:Generator_ColumnVarNameInTable="columnSurveyCategory" msprop:Generator_ColumnPropNameInRow="SurveyCategory" msprop:Generator_ColumnPropNameInTable="SurveyCategoryColumn" msprop:Generator_UserColumnName="SurveyCategory" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CabinTypeKey1">
+      <xs:selector xpath=".//mstns:CabinType" />
+      <xs:field xpath="mstns:CabinTypeName" />
+      <xs:field xpath="mstns:AnswerCategoryName" />
+      <xs:field xpath="mstns:SurveyCategory" />
+    </xs:unique>
+    <xs:unique name="DestinationAirportKey1">
+      <xs:selector xpath=".//mstns:DestinationAirport" />
+      <xs:field xpath="mstns:AirportCode" />
+      <xs:field xpath="mstns:AnswerCategoryName" />
+      <xs:field xpath="mstns:SurveyCategory" />
+    </xs:unique>
+    <xs:unique name="AnswerCategoryKey1">
+      <xs:selector xpath=".//mstns:AnswerCategory" />
+      <xs:field xpath="mstns:SurveyCategory" />
+      <xs:field xpath="mstns:AnswerCategoryName" />
+    </xs:unique>
+    <xs:unique name="AgeKey1">
+      <xs:selector xpath=".//mstns:Age" />
+      <xs:field xpath="mstns:AgeRange" />
+      <xs:field xpath="mstns:AnswerCategoryName" />
+      <xs:field xpath="mstns:SurveyCategory" />
+    </xs:unique>
+    <xs:unique name="GenderKey1">
+      <xs:selector xpath=".//mstns:Gender" />
+      <xs:field xpath="mstns:GenderName" />
+      <xs:field xpath="mstns:AnswerCategoryName" />
+      <xs:field xpath="mstns:SurveyCategory" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="AnswerCategory_Gender" msdata:parent="AnswerCategory" msdata:child="Gender" msdata:parentkey="SurveyCategory AnswerCategoryName" msdata:childkey="SurveyCategory AnswerCategoryName" msprop:Generator_UserChildTable="Gender" msprop:Generator_ChildPropName="GetGenderRows" msprop:Generator_UserRelationName="AnswerCategory_Gender" msprop:Generator_ParentPropName="AnswerCategoryRowParent" msprop:Generator_RelationVarName="relationAnswerCategory_Gender" msprop:Generator_UserParentTable="AnswerCategory" />
+      <msdata:Relationship name="AnswerCategory_Age" msdata:parent="AnswerCategory" msdata:child="Age" msdata:parentkey="AnswerCategoryName SurveyCategory" msdata:childkey="AnswerCategoryName SurveyCategory" msprop:Generator_UserChildTable="Age" msprop:Generator_ChildPropName="GetAgeRows" msprop:Generator_UserRelationName="AnswerCategory_Age" msprop:Generator_ParentPropName="AnswerCategoryRowParent" msprop:Generator_RelationVarName="relationAnswerCategory_Age" msprop:Generator_UserParentTable="AnswerCategory" />
+      <msdata:Relationship name="AnswerCategory_CabinType" msdata:parent="AnswerCategory" msdata:child="CabinType" msdata:parentkey="SurveyCategory AnswerCategoryName" msdata:childkey="SurveyCategory AnswerCategoryName" msprop:Generator_UserChildTable="CabinType" msprop:Generator_ChildPropName="GetCabinTypeRows" msprop:Generator_UserRelationName="AnswerCategory_CabinType" msprop:Generator_RelationVarName="relationAnswerCategory_CabinType" msprop:Generator_UserParentTable="AnswerCategory" msprop:Generator_ParentPropName="AnswerCategoryRowParent" />
+      <msdata:Relationship name="AnswerCategory_DestinationAirport" msdata:parent="AnswerCategory" msdata:child="DestinationAirport" msdata:parentkey="SurveyCategory AnswerCategoryName" msdata:childkey="SurveyCategory AnswerCategoryName" msprop:Generator_UserChildTable="DestinationAirport" msprop:Generator_ChildPropName="GetDestinationAirportRows" msprop:Generator_UserRelationName="AnswerCategory_DestinationAirport" msprop:Generator_RelationVarName="relationAnswerCategory_DestinationAirport" msprop:Generator_UserParentTable="AnswerCategory" msprop:Generator_ParentPropName="AnswerCategoryRowParent" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

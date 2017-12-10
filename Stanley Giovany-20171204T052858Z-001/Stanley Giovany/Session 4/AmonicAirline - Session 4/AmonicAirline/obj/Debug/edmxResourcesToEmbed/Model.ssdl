@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="session4Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Choice">
+    <Key>
+      <PropertyRef Name="ChoiceId" />
+    </Key>
+    <Property Name="ChoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChoiceText" Type="varchar(max)" />
+    <Property Name="ChoiceValue" Type="int" />
+  </EntityType>
+  <EntityType Name="Mapping">
+    <Key>
+      <PropertyRef Name="MappingId" />
+    </Key>
+    <Property Name="MappingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="MultipleChoiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MultipleChoice">
+    <Key>
+      <PropertyRef Name="MultipleChoiceId" />
+    </Key>
+    <Property Name="MultipleChoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MultipleChoiceDetail">
+    <Key>
+      <PropertyRef Name="MultipleChoiceId" />
+      <PropertyRef Name="ChoiceId" />
+    </Key>
+    <Property Name="MultipleChoiceId" Type="int" Nullable="false" />
+    <Property Name="ChoiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="QuestionId" />
+    </Key>
+    <Property Name="QuestionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuestionText" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Survey">
+    <Key>
+      <PropertyRef Name="SurveyId" />
+    </Key>
+    <Property Name="SurveyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SurveyDetail">
+    <Key>
+      <PropertyRef Name="SurveyId" />
+      <PropertyRef Name="MappingId" />
+    </Key>
+    <Property Name="SurveyId" Type="int" Nullable="false" />
+    <Property Name="MappingId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SurveySubmission">
+    <Key>
+      <PropertyRef Name="SurveySubmissionId" />
+    </Key>
+    <Property Name="SurveySubmissionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveyId" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Age" Type="int" />
+    <Property Name="DepartureAirport" Type="char" MaxLength="3" />
+    <Property Name="ArrivalAirport" Type="char" MaxLength="3" />
+    <Property Name="CabinType" Type="varchar" MaxLength="30" />
+    <Property Name="SubmissionMonth" Type="int" />
+    <Property Name="SubmissionYear" Type="int" />
+  </EntityType>
+  <EntityType Name="SurveySubmissionDetail">
+    <Key>
+      <PropertyRef Name="SurveySubmissionDetailId" />
+    </Key>
+    <Property Name="SurveySubmissionDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SurveySubmissionId" Type="int" Nullable="false" />
+    <Property Name="QuestionId" Type="int" Nullable="false" />
+    <Property Name="ChoiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Mapping__Multipl__02FC7413">
+    <End Role="MultipleChoice" Type="Self.MultipleChoice" Multiplicity="1" />
+    <End Role="Mapping" Type="Self.Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MultipleChoice">
+        <PropertyRef Name="MultipleChoiceId" />
+      </Principal>
+      <Dependent Role="Mapping">
+        <PropertyRef Name="MultipleChoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mapping__Questio__02084FDA">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="Mapping" Type="Self.Mapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="QuestionId" />
+      </Principal>
+      <Dependent Role="Mapping">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MultipleC__Choic__7F2BE32F">
+    <End Role="Choice" Type="Self.Choice" Multiplicity="1" />
+    <End Role="MultipleChoiceDetail" Type="Self.MultipleChoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Choice">
+        <PropertyRef Name="ChoiceId" />
+      </Principal>
+      <Dependent Role="MultipleChoiceDetail">
+        <PropertyRef Name="ChoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MultipleC__Multi__7E37BEF6">
+    <End Role="MultipleChoice" Type="Self.MultipleChoice" Multiplicity="1" />
+    <End Role="MultipleChoiceDetail" Type="Self.MultipleChoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MultipleChoice">
+        <PropertyRef Name="MultipleChoiceId" />
+      </Principal>
+      <Dependent Role="MultipleChoiceDetail">
+        <PropertyRef Name="MultipleChoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveyDet__Mappi__08B54D69">
+    <End Role="Mapping" Type="Self.Mapping" Multiplicity="1" />
+    <End Role="SurveyDetail" Type="Self.SurveyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mapping">
+        <PropertyRef Name="MappingId" />
+      </Principal>
+      <Dependent Role="SurveyDetail">
+        <PropertyRef Name="MappingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveyDet__Surve__07C12930">
+    <End Role="Survey" Type="Self.Survey" Multiplicity="1" />
+    <End Role="SurveyDetail" Type="Self.SurveyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Survey">
+        <PropertyRef Name="SurveyId" />
+      </Principal>
+      <Dependent Role="SurveyDetail">
+        <PropertyRef Name="SurveyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveySub__Choic__10566F31">
+    <End Role="Choice" Type="Self.Choice" Multiplicity="1" />
+    <End Role="SurveySubmissionDetail" Type="Self.SurveySubmissionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Choice">
+        <PropertyRef Name="ChoiceId" />
+      </Principal>
+      <Dependent Role="SurveySubmissionDetail">
+        <PropertyRef Name="ChoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveySub__Quest__0F624AF8">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="SurveySubmissionDetail" Type="Self.SurveySubmissionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="QuestionId" />
+      </Principal>
+      <Dependent Role="SurveySubmissionDetail">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveySub__Surve__0B91BA14">
+    <End Role="Survey" Type="Self.Survey" Multiplicity="1" />
+    <End Role="SurveySubmission" Type="Self.SurveySubmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Survey">
+        <PropertyRef Name="SurveyId" />
+      </Principal>
+      <Dependent Role="SurveySubmission">
+        <PropertyRef Name="SurveyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SurveySub__Surve__0E6E26BF">
+    <End Role="SurveySubmission" Type="Self.SurveySubmission" Multiplicity="1" />
+    <End Role="SurveySubmissionDetail" Type="Self.SurveySubmissionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SurveySubmission">
+        <PropertyRef Name="SurveySubmissionId" />
+      </Principal>
+      <Dependent Role="SurveySubmissionDetail">
+        <PropertyRef Name="SurveySubmissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="session4ModelStoreContainer">
+    <EntitySet Name="Choice" EntityType="Self.Choice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mapping" EntityType="Self.Mapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MultipleChoice" EntityType="Self.MultipleChoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MultipleChoiceDetail" EntityType="Self.MultipleChoiceDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Survey" EntityType="Self.Survey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveyDetail" EntityType="Self.SurveyDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveySubmission" EntityType="Self.SurveySubmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SurveySubmissionDetail" EntityType="Self.SurveySubmissionDetail" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Mapping__Multipl__02FC7413" Association="Self.FK__Mapping__Multipl__02FC7413">
+      <End Role="MultipleChoice" EntitySet="MultipleChoice" />
+      <End Role="Mapping" EntitySet="Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mapping__Questio__02084FDA" Association="Self.FK__Mapping__Questio__02084FDA">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Mapping" EntitySet="Mapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MultipleC__Choic__7F2BE32F" Association="Self.FK__MultipleC__Choic__7F2BE32F">
+      <End Role="Choice" EntitySet="Choice" />
+      <End Role="MultipleChoiceDetail" EntitySet="MultipleChoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MultipleC__Multi__7E37BEF6" Association="Self.FK__MultipleC__Multi__7E37BEF6">
+      <End Role="MultipleChoice" EntitySet="MultipleChoice" />
+      <End Role="MultipleChoiceDetail" EntitySet="MultipleChoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveyDet__Mappi__08B54D69" Association="Self.FK__SurveyDet__Mappi__08B54D69">
+      <End Role="Mapping" EntitySet="Mapping" />
+      <End Role="SurveyDetail" EntitySet="SurveyDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveyDet__Surve__07C12930" Association="Self.FK__SurveyDet__Surve__07C12930">
+      <End Role="Survey" EntitySet="Survey" />
+      <End Role="SurveyDetail" EntitySet="SurveyDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveySub__Choic__10566F31" Association="Self.FK__SurveySub__Choic__10566F31">
+      <End Role="Choice" EntitySet="Choice" />
+      <End Role="SurveySubmissionDetail" EntitySet="SurveySubmissionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveySub__Quest__0F624AF8" Association="Self.FK__SurveySub__Quest__0F624AF8">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="SurveySubmissionDetail" EntitySet="SurveySubmissionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveySub__Surve__0B91BA14" Association="Self.FK__SurveySub__Surve__0B91BA14">
+      <End Role="Survey" EntitySet="Survey" />
+      <End Role="SurveySubmission" EntitySet="SurveySubmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SurveySub__Surve__0E6E26BF" Association="Self.FK__SurveySub__Surve__0E6E26BF">
+      <End Role="SurveySubmission" EntitySet="SurveySubmission" />
+      <End Role="SurveySubmissionDetail" EntitySet="SurveySubmissionDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

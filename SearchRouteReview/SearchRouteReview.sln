@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchRouteReview", "SearchRouteReview\SearchRouteReview.csproj", "{B59157E2-D00F-46E2-8DE4-D1C86084C180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B59157E2-D00F-46E2-8DE4-D1C86084C180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59157E2-D00F-46E2-8DE4-D1C86084C180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59157E2-D00F-46E2-8DE4-D1C86084C180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59157E2-D00F-46E2-8DE4-D1C86084C180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

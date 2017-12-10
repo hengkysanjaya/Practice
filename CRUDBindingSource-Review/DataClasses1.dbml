@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BinaBangsaSchool" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-RACLV28\SQLEXPRESS;Initial Catalog=BinaBangsaSchool;Integrated Security=True" SettingsObjectName="CRUDBindingSource_Review.Properties.Settings" SettingsPropertyName="BinaBangsaSchoolConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Course" Member="Courses">
+    <Type Name="Course">
+      <Column Name="[ID Course]" Member="ID_Course" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Assignment" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Mid Exam]" Member="Mid_Exam" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Final Exam]" Member="Final_Exam" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Course_Score" Member="Scores" ThisKey="ID_Course" OtherKey="ID_Course" Type="Score" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="NISN" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Birthplace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Date of Birth]" Member="Date_of_Birth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Association Name="Student_Student" Member="Student2" ThisKey="NISN" OtherKey="NISN" Type="Student" Cardinality="One" />
+      <Association Name="Student_Score" Member="Scores" ThisKey="NISN" OtherKey="NISN" Type="Score" />
+      <Association Name="Student_Student" Member="Student1" ThisKey="NISN" OtherKey="NISN" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Score" Member="Scores">
+    <Type Name="Score">
+      <Column Name="NISN" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[ID Course]" Member="ID_Course" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Assignment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Mid Exam]" Member="Mid_Exam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Final Exam]" Member="Final_Exam" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Course_Score" Member="Course" ThisKey="ID_Course" OtherKey="ID_Course" Type="Course" IsForeignKey="true" />
+      <Association Name="Student_Score" Member="Student" ThisKey="NISN" OtherKey="NISN" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

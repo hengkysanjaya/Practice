@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App2", "App2", "{0226B9F5-0236-43C3-8313-940921AEFCCC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App2.Shared", "App2\App2.Shared\App2.Shared.vcxitems", "{D6D595FB-0867-4B75-A4BE-9E79F2ABD890}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App2.Windows", "App2\App2.Windows\App2.Windows.vcxproj", "{A18C8681-E482-4AAE-8898-49AB564D3225}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App2.WindowsPhone", "App2\App2.WindowsPhone\App2.WindowsPhone.vcxproj", "{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		App2\App2.Shared\App2.Shared.vcxitems*{19f7f8dd-cf95-4ca7-bb01-2f6d350dd97d}*SharedItemsImports = 4
+		App2\App2.Shared\App2.Shared.vcxitems*{a18c8681-e482-4aae-8898-49ab564d3225}*SharedItemsImports = 4
+		App2\App2.Shared\App2.Shared.vcxitems*{d6d595fb-0867-4b75-a4be-9e79f2abd890}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|ARM.Build.0 = Debug|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x64.ActiveCfg = Debug|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x64.Build.0 = Debug|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x64.Deploy.0 = Debug|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x86.ActiveCfg = Debug|Win32
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x86.Build.0 = Debug|Win32
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Debug|x86.Deploy.0 = Debug|Win32
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|ARM.ActiveCfg = Release|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|ARM.Build.0 = Release|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|ARM.Deploy.0 = Release|ARM
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x64.ActiveCfg = Release|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x64.Build.0 = Release|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x64.Deploy.0 = Release|x64
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x86.ActiveCfg = Release|Win32
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x86.Build.0 = Release|Win32
+		{A18C8681-E482-4AAE-8898-49AB564D3225}.Release|x86.Deploy.0 = Release|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|ARM.Build.0 = Debug|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|x64.ActiveCfg = Debug|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|x86.ActiveCfg = Debug|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|x86.Build.0 = Debug|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Debug|x86.Deploy.0 = Debug|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|ARM.ActiveCfg = Release|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|ARM.Build.0 = Release|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|ARM.Deploy.0 = Release|ARM
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|x64.ActiveCfg = Release|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|x86.ActiveCfg = Release|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|x86.Build.0 = Release|Win32
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D}.Release|x86.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6D595FB-0867-4B75-A4BE-9E79F2ABD890} = {0226B9F5-0236-43C3-8313-940921AEFCCC}
+		{A18C8681-E482-4AAE-8898-49AB564D3225} = {0226B9F5-0236-43C3-8313-940921AEFCCC}
+		{19F7F8DD-CF95-4CA7-BB01-2F6D350DD97D} = {0226B9F5-0236-43C3-8313-940921AEFCCC}
+	EndGlobalSection
+EndGlobal

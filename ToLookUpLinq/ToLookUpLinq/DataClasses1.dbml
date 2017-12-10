@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="arrangeyourtourdb" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-RACLV28\SQLEXPRESS;Initial Catalog=arrangeyourtourdb;Integrated Security=True" SettingsObjectName="ToLookUpLinq.Properties.Settings" SettingsPropertyName="arrangeyourtourdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.detailtransaksihotel" Member="detailtransaksihotels">
+    <Type Name="detailtransaksihotel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idtransaksi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idtipekamar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idhotel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jumlahkamar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hargapermalam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lamatinggal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tanggalmasuk" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tanggalkeluar" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="transaksi_detailtransaksihotel" Member="transaksi" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="transaksi" IsForeignKey="true" />
+      <Association Name="hotel_detailtransaksihotel" Member="hotel" ThisKey="idhotel" OtherKey="idhotel" Type="hotel" IsForeignKey="true" />
+      <Association Name="tipekamar_detailtransaksihotel" Member="tipekamar" ThisKey="idtipekamar" OtherKey="idtipekamar" Type="tipekamar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.transaksi" Member="transaksis">
+    <Type Name="transaksi">
+      <Column Name="idtransaksi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="namaperjalanan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tanggaltransaksi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Association Name="transaksi_detailtransaksihotel" Member="detailtransaksihotels" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="detailtransaksihotel" />
+      <Association Name="transaksi_detailtransaksipenerbangan" Member="detailtransaksipenerbangans" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="detailtransaksipenerbangan" />
+      <Association Name="transaksi_detailtransaksitour" Member="detailtransaksitours" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="detailtransaksitour" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detailtransaksipenerbangan" Member="detailtransaksipenerbangans">
+    <Type Name="detailtransaksipenerbangan">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idtransaksi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idjadwalpenerbangan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kodepemesanan" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="hargaperorang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="totalpenumpang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="transaksi_detailtransaksipenerbangan" Member="transaksi" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="transaksi" IsForeignKey="true" />
+      <Association Name="jadwalpenerbangan_detailtransaksipenerbangan" Member="jadwalpenerbangan" ThisKey="idjadwalpenerbangan" OtherKey="idjadwalpenerbangan" Type="jadwalpenerbangan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detailtransaksitour" Member="detailtransaksitours">
+    <Type Name="detailtransaksitour">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idtransaksi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idpakettour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="totalpengunjung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="harga" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tanggalmasuk" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="transaksi_detailtransaksitour" Member="transaksi" ThisKey="idtransaksi" OtherKey="idtransaksi" Type="transaksi" IsForeignKey="true" />
+      <Association Name="pakettour_detailtransaksitour" Member="pakettour" ThisKey="idpakettour" OtherKey="idpakettour" Type="pakettour" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hotel" Member="hotels">
+    <Type Name="hotel">
+      <Column Name="idhotel" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="namahotel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="idkota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="hotel_detailtransaksihotel" Member="detailtransaksihotels" ThisKey="idhotel" OtherKey="idhotel" Type="detailtransaksihotel" />
+      <Association Name="hotel_tipekamar" Member="tipekamars" ThisKey="idhotel" OtherKey="idhotel" Type="tipekamar" />
+      <Association Name="kota_hotel" Member="kota" ThisKey="idkota" OtherKey="idkota" Type="kota" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jadwalpenerbangan" Member="jadwalpenerbangans">
+    <Type Name="jadwalpenerbangan">
+      <Column Name="idjadwalpenerbangan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idkotakeberangkatan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idkotatujuan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="kapasitas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="waktupenerbangan" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="biayaperjalanan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="jadwalpenerbangan_detailtransaksipenerbangan" Member="detailtransaksipenerbangans" ThisKey="idjadwalpenerbangan" OtherKey="idjadwalpenerbangan" Type="detailtransaksipenerbangan" />
+      <Association Name="kota_jadwalpenerbangan" Member="kota" ThisKey="idkotakeberangkatan" OtherKey="idkota" Type="kota" IsForeignKey="true" />
+      <Association Name="kota_jadwalpenerbangan1" Member="kota1" ThisKey="idkotatujuan" OtherKey="idkota" Type="kota" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kota" Member="kotas">
+    <Type Name="kota">
+      <Column Name="idkota" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="namakota" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="kota_hotel" Member="hotels" ThisKey="idkota" OtherKey="idkota" Type="hotel" />
+      <Association Name="kota_jadwalpenerbangan" Member="jadwalpenerbangans" ThisKey="idkota" OtherKey="idkotakeberangkatan" Type="jadwalpenerbangan" />
+      <Association Name="kota_jadwalpenerbangan1" Member="jadwalpenerbangans1" ThisKey="idkota" OtherKey="idkotatujuan" Type="jadwalpenerbangan" />
+      <Association Name="kota_pakettour" Member="pakettours" ThisKey="idkota" OtherKey="idkota" Type="pakettour" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pakettour" Member="pakettours">
+    <Type Name="pakettour">
+      <Column Name="idpakettour" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idkota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="harimulaibuka" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="hariterakhirbuka" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="biaya" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kapasitaspeserta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="namapaket" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="pakettour_detailtransaksitour" Member="detailtransaksitours" ThisKey="idpakettour" OtherKey="idpakettour" Type="detailtransaksitour" />
+      <Association Name="kota_pakettour" Member="kota" ThisKey="idkota" OtherKey="idkota" Type="kota" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipekamar" Member="tipekamars">
+    <Type Name="tipekamar">
+      <Column Name="idtipekamar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idhotel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="namatipekamar" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="hargapermalam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jumlahkamar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tipekamar_detailtransaksihotel" Member="detailtransaksihotels" ThisKey="idtipekamar" OtherKey="idtipekamar" Type="detailtransaksihotel" />
+      <Association Name="hotel_tipekamar" Member="hotel" ThisKey="idhotel" OtherKey="idhotel" Type="hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,92 @@
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.exe
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.pdb
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.dll
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.SqlServer.dll
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.xml
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.SqlServer.xml
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.csprojResolveAssemblyReference.cache
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.Properties.Resources.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.csproj.GenerateResource.Cache
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.exe
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.pdb
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.exe
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.pdb
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.exe
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\AmonicAirline.pdb
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.dll
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.SqlServer.dll
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.xml
+D:\Workspace\C#\AmonicAirline\AmonicAirline\bin\Debug\EntityFramework.SqlServer.xml
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.csprojResolveAssemblyReference.cache
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.AddUserForm.resources
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.LoginForm.resources
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.MainForm.resources
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.Properties.Resources.resources
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.csproj.GenerateResource.Cache
+D:\Workspace\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.EditRoleForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.AddUserForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.AdministratorMainScreen.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.EditRoleForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.LoginForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.MainForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.UserMainScreen.resources
+E:\Workspace\VS2015\C#\AmonicAirline\AmonicAirline\obj\Debug\AmonicAirline.MonitoringForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.exe
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.pdb
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.pdb
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.dll
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.dll
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.xml
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.xml
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csprojResolveAssemblyReference.cache
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AddUserForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AdministratorMainScreen.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.EditRoleForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.LoginForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MainForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MonitoringForm.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.Properties.Resources.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.UserMainScreen.resources
+D:\Workspace\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csproj.GenerateResource.Cache
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.exe
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.pdb
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.pdb
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.dll
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.dll
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.xml
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.xml
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csprojResolveAssemblyReference.cache
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AddUserForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AdministratorMainScreen.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.EditRoleForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.LoginForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MainForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MonitoringForm.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.Properties.Resources.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.UserMainScreen.resources
+E:\Workspace\VS2015\C#\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csproj.GenerateResource.Cache
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.pdb
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\AmonicAirline.pdb
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.dll
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.xml
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csprojResolveAssemblyReference.cache
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AddUserForm.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.AdministratorMainScreen.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.EditRoleForm.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.LoginForm.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MainForm.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.MonitoringForm.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.Properties.Resources.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.UserMainScreen.resources
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\Stanley Giovany-20171204T052858Z-001\Stanley Giovany\Session 1\AmonicAirline - Session 1\AmonicAirline\obj\Debug\AmonicAirline.csproj.GenerateResource.Cache

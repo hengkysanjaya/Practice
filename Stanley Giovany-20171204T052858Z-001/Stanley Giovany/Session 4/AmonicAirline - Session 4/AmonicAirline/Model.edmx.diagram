@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fecd415b083a421aacc96ad9a37188a0" Name="Diagram1">
+        <EntityTypeShape EntityType="session4Model.Choice" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.Mapping" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.MultipleChoice" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.Question" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.Survey" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.SurveySubmission" Width="1.5" PointX="9.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="session4Model.SurveySubmissionDetail" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="session4Model.FK__SurveySub__Choic__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.FK__Mapping__Multipl__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.FK__Mapping__Questio__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.FK__SurveySub__Quest__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.FK__SurveySub__Surve__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.FK__SurveySub__Surve__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.MultipleChoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="session4Model.SurveyDetail" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

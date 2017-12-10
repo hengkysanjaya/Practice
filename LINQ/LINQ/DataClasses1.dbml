@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Modul01-Hengky" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-RACLV28\SQLEXPRESS;Initial Catalog=Modul01-Hengky;Integrated Security=True" SettingsObjectName="LINQ.Properties.Settings" SettingsPropertyName="Modul01_HengkyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.detaildelivery" Member="detaildeliveries">
+    <Type Name="detaildelivery">
+      <Column Name="detaildeliveryid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="deliveryid" Type="System.String" DbType="NChar(8)" CanBeNull="true" />
+      <Column Name="productid" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="msproduk_detaildelivery" Member="msproduk" ThisKey="productid" OtherKey="productid" Type="msproduk" IsForeignKey="true" />
+      <Association Name="headerdelivery_detaildelivery" Member="headerdelivery" ThisKey="deliveryid" OtherKey="DeliveryId" Type="headerdelivery" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msproduk" Member="msproduks">
+    <Type Name="msproduk">
+      <Column Name="productid" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="packaging" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="msproduk_detaildelivery" Member="detaildeliveries" ThisKey="productid" OtherKey="productid" Type="detaildelivery" />
+      <Association Name="msproduk_detailfaktur" Member="detailfakturs" ThisKey="productid" OtherKey="produkid" Type="detailfaktur" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detailfaktur" Member="detailfakturs">
+    <Type Name="detailfaktur">
+      <Column Name="detailfakturid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fakturid" Type="System.String" DbType="NChar(9)" CanBeNull="true" />
+      <Column Name="produkid" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="msproduk_detailfaktur" Member="msproduk" ThisKey="produkid" OtherKey="productid" Type="msproduk" IsForeignKey="true" />
+      <Association Name="headerfaktur_detailfaktur" Member="headerfaktur" ThisKey="fakturid" OtherKey="fakturid" Type="headerfaktur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.headerdelivery" Member="headerdeliveries">
+    <Type Name="headerdelivery">
+      <Column Name="DeliveryId" Type="System.String" DbType="NChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PONumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Place" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Delivered" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="headerdelivery_detaildelivery" Member="detaildeliveries" ThisKey="DeliveryId" OtherKey="deliveryid" Type="detaildelivery" />
+      <Association Name="headerpo_headerdelivery" Member="headerpo" ThisKey="PONumber" OtherKey="PONumber" Type="headerpo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.headerfaktur" Member="headerfakturs">
+    <Type Name="headerfaktur">
+      <Column Name="fakturid" Type="System.String" DbType="NChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ponumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="custid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="headerfaktur_detailfaktur" Member="detailfakturs" ThisKey="fakturid" OtherKey="fakturid" Type="detailfaktur" />
+      <Association Name="headerpo_headerfaktur" Member="headerpo" ThisKey="ponumber" OtherKey="PONumber" Type="headerpo" IsForeignKey="true" />
+      <Association Name="mscustomer_headerfaktur" Member="mscustomer" ThisKey="custid" OtherKey="custid" Type="mscustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.headerpo" Member="headerpos">
+    <Type Name="headerpo">
+      <Column Name="PONumber" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="custid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="headerpo_headerdelivery" Member="headerdeliveries" ThisKey="PONumber" OtherKey="PONumber" Type="headerdelivery" />
+      <Association Name="headerpo_headerfaktur" Member="headerfakturs" ThisKey="PONumber" OtherKey="ponumber" Type="headerfaktur" />
+      <Association Name="mscustomer_headerpo" Member="mscustomer" ThisKey="custid" OtherKey="custid" Type="mscustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mscustomer" Member="mscustomers">
+    <Type Name="mscustomer">
+      <Column Name="custid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="handphone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="mscustomer_headerfaktur" Member="headerfakturs" ThisKey="custid" OtherKey="custid" Type="headerfaktur" />
+      <Association Name="mscustomer_headerpo" Member="headerpos" ThisKey="custid" OtherKey="custid" Type="headerpo" />
+    </Type>
+  </Table>
+</Database>

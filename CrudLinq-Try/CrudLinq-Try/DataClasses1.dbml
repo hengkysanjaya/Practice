@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="esemkabakery" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:192.168.1.148\SQLEXPRESS,49172;Initial Catalog=esemkabakery;Integrated Security=True" SettingsObjectName="CrudLinq_Try.Properties.Settings" SettingsPropertyName="esemkabakeryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.employee" Member="employees">
+    <Type Name="employee">
+      <Column Name="employeeid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employeename" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="employeeaddress" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employeephone" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="employee_sellingheader" Member="sellingheaders" ThisKey="employeeid" OtherKey="employeeid" Type="sellingheader" />
+      <Association Name="employee_incomingrawmaterialheader" Member="incomingrawmaterialheaders" ThisKey="employeeid" OtherKey="employeeid" Type="incomingrawmaterialheader" />
+      <Association Name="employee_productionheader" Member="productionheaders" ThisKey="employeeid" OtherKey="employeeid" Type="productionheader" />
+      <Association Name="employee_rawmaterial" Member="rawmaterials" ThisKey="employeeid" OtherKey="employeeid" Type="rawmaterial" />
+      <Association Name="employee_recipeheader" Member="recipeheaders" ThisKey="employeeid" OtherKey="employeeid" Type="recipeheader" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sellingheader" Member="sellingheaders">
+    <Type Name="sellingheader">
+      <Column Name="sellingid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sellingdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employeeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="sellingheader_sellingdetail" Member="sellingdetails" ThisKey="sellingid" OtherKey="sellingid" Type="sellingdetail" />
+      <Association Name="employee_sellingheader" Member="employee" ThisKey="employeeid" OtherKey="employeeid" Type="employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.food" Member="foods">
+    <Type Name="food">
+      <Column Name="foodid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="foodname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="food_productiondetail" Member="productiondetails" ThisKey="foodid" OtherKey="foodid" Type="productiondetail" />
+      <Association Name="food_recipeheader" Member="recipeheaders" ThisKey="foodid" OtherKey="foodid" Type="recipeheader" />
+      <Association Name="food_sellingdetail" Member="sellingdetails" ThisKey="foodid" OtherKey="foodid" Type="sellingdetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.incomingrawmaterialdetail" Member="incomingrawmaterialdetails">
+    <Type Name="incomingrawmaterialdetail">
+      <Column Name="incomingrawmaterialid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rawmaterialid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="priceper100gram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bestbeforedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="weightingram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="incomingrawmaterialheader_incomingrawmaterialdetail" Member="incomingrawmaterialheader" ThisKey="incomingrawmaterialid" OtherKey="incomingrawmaterialid" Type="incomingrawmaterialheader" IsForeignKey="true" />
+      <Association Name="rawmaterial_incomingrawmaterialdetail" Member="rawmaterial" ThisKey="rawmaterialid" OtherKey="rawmaterialid" Type="rawmaterial" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.incomingrawmaterialheader" Member="incomingrawmaterialheaders">
+    <Type Name="incomingrawmaterialheader">
+      <Column Name="incomingrawmaterialid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="incomingdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employeeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="incomingrawmaterialheader_incomingrawmaterialdetail" Member="incomingrawmaterialdetails" ThisKey="incomingrawmaterialid" OtherKey="incomingrawmaterialid" Type="incomingrawmaterialdetail" />
+      <Association Name="incomingrawmaterialheader_rawmaterialintake" Member="rawmaterialintakes" ThisKey="incomingrawmaterialid" OtherKey="incomingrawmaterialid" Type="rawmaterialintake" />
+      <Association Name="employee_incomingrawmaterialheader" Member="employee" ThisKey="employeeid" OtherKey="employeeid" Type="employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.productiondetail" Member="productiondetails">
+    <Type Name="productiondetail">
+      <Column Name="productionid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="batchnumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="foodid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="productionoutputqty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="expireddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="food_productiondetail" Member="food" ThisKey="foodid" OtherKey="foodid" Type="food" IsForeignKey="true" />
+      <Association Name="productionheader_productiondetail" Member="productionheader" ThisKey="productionid" OtherKey="productionid" Type="productionheader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.productionheader" Member="productionheaders">
+    <Type Name="productionheader">
+      <Column Name="productionid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="productiondate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employeeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="productionheader_productiondetail" Member="productiondetails" ThisKey="productionid" OtherKey="productionid" Type="productiondetail" />
+      <Association Name="employee_productionheader" Member="employee" ThisKey="employeeid" OtherKey="employeeid" Type="employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rawmaterial" Member="rawmaterials">
+    <Type Name="rawmaterial">
+      <Column Name="rawmaterialid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rawmaterialname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employeeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="inputeddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="rawmaterial_incomingrawmaterialdetail" Member="incomingrawmaterialdetails" ThisKey="rawmaterialid" OtherKey="rawmaterialid" Type="incomingrawmaterialdetail" />
+      <Association Name="rawmaterial_rawmaterialintake" Member="rawmaterialintakes" ThisKey="rawmaterialid" OtherKey="rawmaterialid" Type="rawmaterialintake" />
+      <Association Name="employee_rawmaterial" Member="employee" ThisKey="employeeid" OtherKey="employeeid" Type="employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rawmaterialintake" Member="rawmaterialintakes">
+    <Type Name="rawmaterialintake">
+      <Column Name="batchnumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rawmaterialid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="incomingrawmaterialid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="weightingram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="incomingrawmaterialheader_rawmaterialintake" Member="incomingrawmaterialheader" ThisKey="incomingrawmaterialid" OtherKey="incomingrawmaterialid" Type="incomingrawmaterialheader" IsForeignKey="true" />
+      <Association Name="rawmaterial_rawmaterialintake" Member="rawmaterial" ThisKey="rawmaterialid" OtherKey="rawmaterialid" Type="rawmaterial" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.recipedetail" Member="recipedetails">
+    <Type Name="recipedetail">
+      <Column Name="recipeid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rawmaterialid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="weightingram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.recipeheader" Member="recipeheaders">
+    <Type Name="recipeheader">
+      <Column Name="recipeid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="foodid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="outputunitinpieces" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="employeeid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="createddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="employee_recipeheader" Member="employee" ThisKey="employeeid" OtherKey="employeeid" Type="employee" IsForeignKey="true" />
+      <Association Name="food_recipeheader" Member="food" ThisKey="foodid" OtherKey="foodid" Type="food" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sellingdetail" Member="sellingdetails">
+    <Type Name="sellingdetail">
+      <Column Name="sellingid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="foodid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="batchnumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="food_sellingdetail" Member="food" ThisKey="foodid" OtherKey="foodid" Type="food" IsForeignKey="true" />
+      <Association Name="sellingheader_sellingdetail" Member="sellingheader" ThisKey="sellingid" OtherKey="sellingid" Type="sellingheader" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

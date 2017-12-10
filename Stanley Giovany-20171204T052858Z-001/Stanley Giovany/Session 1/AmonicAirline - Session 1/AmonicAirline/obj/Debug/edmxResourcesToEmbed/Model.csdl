@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="session1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Offices" Relationship="Self.FK_Office_Country" FromRole="Countries" ToRole="Offices" />
+  </EntityType>
+  <EntityType Name="CrashReport">
+    <Key>
+      <PropertyRef Name="CrashReportID" />
+    </Key>
+    <Property Name="CrashReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionLogID" Type="Int32" Nullable="false" />
+    <Property Name="CrashTypeID" Type="Int32" />
+    <Property Name="CrashDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CrashType" Relationship="Self.FK__CrashRepo__Crash__267ABA7A" FromRole="CrashReport" ToRole="CrashType" />
+    <NavigationProperty Name="SessionLog" Relationship="Self.FK__CrashRepo__Sessi__25869641" FromRole="CrashReport" ToRole="SessionLog" />
+  </EntityType>
+  <EntityType Name="CrashType">
+    <Key>
+      <PropertyRef Name="CrashTypeID" />
+    </Key>
+    <Property Name="CrashTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CrashTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CrashReports" Relationship="Self.FK__CrashRepo__Crash__267ABA7A" FromRole="CrashType" ToRole="CrashReport" />
+  </EntityType>
+  <EntityType Name="Office">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK_Office_Country" FromRole="Offices" ToRole="Countries" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Offices" FromRole="Offices" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="SessionLog">
+    <Key>
+      <PropertyRef Name="SessionLogID" />
+    </Key>
+    <Property Name="SessionLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LoginTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogoutTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CrashReports" Relationship="Self.FK__CrashRepo__Sessi__25869641" FromRole="SessionLog" ToRole="CrashReport" />
+    <NavigationProperty Name="User" Relationship="Self.FK__SessionLo__UserI__20C1E124" FromRole="SessionLog" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OfficeID" Type="Int32" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="Office" Relationship="Self.FK_Users_Offices" FromRole="Users" ToRole="Offices" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="SessionLogs" Relationship="Self.FK__SessionLo__UserI__20C1E124" FromRole="Users" ToRole="SessionLog" />
+  </EntityType>
+  <Association Name="FK_Office_Country">
+    <End Role="Countries" Type="Self.Country" Multiplicity="1" />
+    <End Role="Offices" Type="Self.Office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Offices">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CrashRepo__Crash__267ABA7A">
+    <End Role="CrashType" Type="Self.CrashType" Multiplicity="0..1" />
+    <End Role="CrashReport" Type="Self.CrashReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CrashType">
+        <PropertyRef Name="CrashTypeID" />
+      </Principal>
+      <Dependent Role="CrashReport">
+        <PropertyRef Name="CrashTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CrashRepo__Sessi__25869641">
+    <End Role="SessionLog" Type="Self.SessionLog" Multiplicity="1" />
+    <End Role="CrashReport" Type="Self.CrashReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SessionLog">
+        <PropertyRef Name="SessionLogID" />
+      </Principal>
+      <Dependent Role="CrashReport">
+        <PropertyRef Name="SessionLogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Offices">
+    <End Role="Offices" Type="Self.Office" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Offices">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="OfficeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SessionLo__UserI__20C1E124">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="SessionLog" Type="Self.SessionLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SessionLog">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="session1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="CrashReports" EntityType="Self.CrashReport" />
+    <EntitySet Name="CrashTypes" EntityType="Self.CrashType" />
+    <EntitySet Name="Offices" EntityType="Self.Office" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="SessionLogs" EntityType="Self.SessionLog" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Office_Country" Association="Self.FK_Office_Country">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Offices" EntitySet="Offices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CrashRepo__Crash__267ABA7A" Association="Self.FK__CrashRepo__Crash__267ABA7A">
+      <End Role="CrashType" EntitySet="CrashTypes" />
+      <End Role="CrashReport" EntitySet="CrashReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CrashRepo__Sessi__25869641" Association="Self.FK__CrashRepo__Sessi__25869641">
+      <End Role="SessionLog" EntitySet="SessionLogs" />
+      <End Role="CrashReport" EntitySet="CrashReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Offices" Association="Self.FK_Users_Offices">
+      <End Role="Offices" EntitySet="Offices" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SessionLo__UserI__20C1E124" Association="Self.FK__SessionLo__UserI__20C1E124">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SessionLog" EntitySet="SessionLogs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

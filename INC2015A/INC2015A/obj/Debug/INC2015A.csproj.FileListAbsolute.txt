@@ -1,0 +1,6 @@
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\bin\Debug\INC2015A.exe.config
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\bin\Debug\INC2015A.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\bin\Debug\INC2015A.pdb
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\obj\Debug\INC2015A.csprojResolveAssemblyReference.cache
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\obj\Debug\INC2015A.exe
+C:\Users\ITSS-WSC\Documents\Visual Studio 2015\Projects\Hengky Sanjaya\Practice\INC2015A\INC2015A\obj\Debug\INC2015A.pdb

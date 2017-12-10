@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="session4" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-RACLV28\SQLEXPRESS;Initial Catalog=session4;Integrated Security=True" SettingsObjectName="WindowsFormsApplication10.Properties.Settings" SettingsPropertyName="session4ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Survey" Member="Surveys">
+    <Type Name="Survey">
+      <Column Name="SurveyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Departure" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Arrival" Type="System.String" DbType="VarChar(510) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CabinType" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Survey_DetailSurvey" Member="DetailSurveys" ThisKey="SurveyId" OtherKey="SurveyId" Type="DetailSurvey" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailSurvey" Member="DetailSurveys">
+    <Type Name="DetailSurvey">
+      <Column Name="DetailSurveyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SurveyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RatingId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Survey_DetailSurvey" Member="Survey" ThisKey="SurveyId" OtherKey="SurveyId" Type="Survey" IsForeignKey="true" />
+      <Association Name="Question_DetailSurvey" Member="Question" ThisKey="QuestionId" OtherKey="QuestionId" Type="Question" IsForeignKey="true" />
+      <Association Name="Rating_DetailSurvey" Member="Rating" ThisKey="RatingId" OtherKey="RatingId" Type="Rating" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Question" Member="Questions">
+    <Type Name="Question">
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Question" Member="Question1" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Question_DetailSurvey" Member="DetailSurveys" ThisKey="QuestionId" OtherKey="QuestionId" Type="DetailSurvey" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rating" Member="Ratings">
+    <Type Name="Rating">
+      <Column Name="RatingId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Rating_DetailSurvey" Member="DetailSurveys" ThisKey="RatingId" OtherKey="RatingId" Type="DetailSurvey" />
+    </Type>
+  </Table>
+  <Function Name="dbo.getData" Method="getData">
+    <ElementType Name="getDataResult">
+      <Column Name="Question" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalSurvey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalGender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgeRange" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAgeRange" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CabinType" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCabinType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AirportCode" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAirport" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
